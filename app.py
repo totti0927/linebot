@@ -8,13 +8,14 @@ from linebot.v3.webhook import WebhookHandler, MessageEvent
 from linebot.v3.exceptions import InvalidSignatureError
 
 # ▪・・▪ 環境変数の設定
-os.getenv("LINE_CHANNEL_ACCESS_TOKEN") = "VQLW+Jg0yrKEh/CctElX5j5qYwsMJqDNdqC6mo4CdVw9iXZowCQ23LITmdGv7ZhC6MFD0DV26JqBwRRyOhEPz/fShuz7gti2BDfvXYqwWy1sE6Esk3ymqkV8WCgu0nd8xoEPRzyS3rsWwx5utKszzgdB04t89/1O/w1cDnyilFU="
-os.getenv("LINE_CHANNEL_SECRET") = "dbb5c67578f6efc325f2d6011261db56"
-os.getenv("GEMINI_API_KEY") = "AIzaSyAEoWodsKPJC4QSsuohkPGSrKXO_ngHNZU"
+os.environ["LINE_CHANNEL_ACCESS_TOKEN"] = "VQLW+Jg0yrKEh/CctElX5j5qYwsMJqDNdqC6mo4CdVw9iXZowCQ23LITmdGv7ZhC6MFD0DV26JqBwRRyOhEPz/fShuz7gti2BDfvXYqwWy1sE6Esk3ymqkV8WCgu0nd8xoEPRzyS3rsWwx5utKszzgdB04t89/1O/w1cDnyilFU="
+os.environ["LINE_CHANNEL_SECRET"] = "dbb5c67578f6efc325f2d6011261db56"
+os.environ["GEMINI_API_KEY"] = "AIzaSyAEoWodsKPJC4QSsuohkPGSrKXO_ngHNZU"
 
 LINE_CHANNEL_ACCESS_TOKEN = os.getenv("LINE_CHANNEL_ACCESS_TOKEN")
 LINE_CHANNEL_SECRET = os.getenv("LINE_CHANNEL_SECRET")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
 
 config = Configuration(access_token=LINE_CHANNEL_ACCESS_TOKEN)
 api_client = ApiClient(configuration=config)
